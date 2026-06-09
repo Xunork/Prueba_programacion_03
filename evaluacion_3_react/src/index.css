@@ -300,3 +300,47 @@ button:active {
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
+
+.filter-input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.6);
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: 250px;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.btn-delete {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}

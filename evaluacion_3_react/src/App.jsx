@@ -27,6 +27,10 @@ function App() {
     }
   };
 
+  const eliminarVehiculo = (patenteEliminar) => {
+    setVehiculos(vehiculos.filter(v => v.patente !== patenteEliminar));
+  };
+
   return (
     <>
       <header>
@@ -48,7 +52,10 @@ function App() {
               {sinCupos ? 'ESTACIONAMIENTO LLENO' : `${cuposDisponibles} cupos disponibles`}
             </span>
           </div>
-          <ListaVehiculos vehiculos={vehiculos} />
+          <ListaVehiculos 
+            vehiculos={vehiculos} 
+            onEliminarVehiculo={eliminarVehiculo} 
+          />
         </div>
       </main>
 
